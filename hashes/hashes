@@ -1,0 +1,3 @@
+hashes
+colors = {"sky" => "blue", "grass" => "green", "Barney" => "purple"}
+colors["smurf" => "blue"]
