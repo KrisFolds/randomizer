@@ -1,0 +1,124 @@
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Spectacular Mountain</h2>
+<img src="pic_mountain.jpg" alt="Mountain View" style="width:304px;height:228px;">
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The select Element</h2>
+<p>The select element defines a drop-down list:</p>
+
+<form action="/action_page.php">
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<center><img class="irc_mi" src="http://rs732.pbsrc.com/albums/ww327/MarandaKay_01/hands1.jpg~c200" alt="Image result for praying hands images with cross" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="1000" height="1000" style="margin-top: 137px;"></center>
+
+<body>
+
+</body>
+</html>
+
+require "pry"
+
+
+class Hangman_game
+  attr_reader :guesses_left, :answer
+  def initialize
+    @guesses_left = 6
+    @answer = ("dog").chars
+    @guessed_letters = []
+    @wrong_letters = []
+    @board = []
+  end
+
+  def draw_board
+    counter = 0
+    @answer.each do |l| if @guessed_letters.include? l
+        @board[counter] = letter.to_s + " "
+        counter += 1
+      else
+        @board[counter] = "_ "
+        counter += 1
+      end
+    end
+  end
+
+  def check_guess guessed_answer
+    if @answer.include? (guessed_answer)
+      puts "That's one."
+      @guessed_letters.push (guessed_answer)
+      puts @guessed_letters #need to figure out how to draw a board
+    else
+      puts "They're hanging amputees."
+      @wrong_letters.push (guessed_answer)
+      @guesses_left -= 1
+      puts "You've used: #{@wrong_letters}."
+    end
+  end
+
+  def won?
+    @answer.all? do |g|
+      @guessed_letters.include?(g)
+    end
+  end
+
+  def game_over?
+    @guesses_left == 0 || won?
+  end
+
+end
+
+
+
+g = Hangman_game.new
+puts "Guess a letter to complete the word before he dies."
+puts "Your Word"
+puts "_ _ _"
+#g.draw_board
+
+until g.game_over?
+  puts "You have #{g.guesses_left} guesses left."
+  puts "Guess a letter."
+  guess = gets.chomp.downcase
+    g.check_guess guess
+end
+
+if g.won?
+  puts "You're somebody's hero."
+end
+to change text color 
+<html>
+  
+<body text = "red">
+    </body>
+</html>
+<center><img class="irc_mi" src="https://ak3.picdn.net/shutterstock/videos/3148003/thumb/1.jpg" alt="Image result for twinkling stars page background" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="1000" height="1000" style="margin-top: 10px;"></center>
